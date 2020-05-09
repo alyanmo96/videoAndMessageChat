@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>הכיתה-שיעור-אונליין</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <div class="container"><!---will delete after connection-->
+        <span id="displayId"></span>
+        <input type="text" id="connId" class="form-control" placeholder="הכנסת מספר זהוי של הצד השני" required>
+        <button id="conn_button" class="btn btn-primary">התחברות עם הצד השני </button><!--connection with student/teacher-->
+        <button id="call_button" class="btn btn-success" title="אחרי ההתחברות">התחל שיחת וידאו והודעות</button><!--start video call-->
+        <hr><br><br>   
+        <div class="row mb-2">
+          <div class="col-md-6"><!--other side user camera-->
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <video id="rVideo" autoplay="autoplay">
+            </div>
+          </div>
+        </div>
+          <div class="col-md-6"><!--user camera-->
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <video id="lVideo" autoplay="autoplay" muted><!--muted to not let user listen to him self, local video-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="chat">
+        <!--message chat output-->
+        <div id="chat-window">
+          <div id="output"></div>
+        </div>
+        <!--need to add scroll down to this-->
+        <input id="message" type="text"  class="form-control" placeholder="כתב/י הודעה"/><!---message text-->
+        <button id="submit" class="btn btn-info">שלח/י הודעה</button>
+      </div><hr><br><br>
+
+      <script src="/socket.io/socket.io.js"></script> 
+      <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+      <script type="text/javascript" src="/client.js"></script>
+    </body>
+</html>
