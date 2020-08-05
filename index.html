@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>הכיתה-שיעור-אונליין</title>
+        <title>Online-Video</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,9 +13,9 @@
     <body>
       <div class="container"><!---will delete after connection-->
         <span id="displayId"></span>
-        <input type="text" id="connId" class="form-control" placeholder="הכנסת מספר זהוי של הצד השני" required>
-        <button id="conn_button" class="btn btn-primary">התחברות עם הצד השני </button><!--connection with student/teacher-->
-        <button id="call_button" class="btn btn-success" title="אחרי ההתחברות">התחל שיחת וידאו והודעות</button><!--start video call-->
+        <input type="text" id="connId" class="form-control" placeholder="insert the other side chat key" required>
+        <button id="conn_button" class="btn btn-primary">connect with other side</button><!--connection with student/teacher-->
+        <button id="call_button" class="btn btn-success">start video and message chat</button><!--start video call-->
         <hr><br><br>   
         <div class="row mb-2">
           <div class="col-md-6"><!--other side user camera-->
@@ -40,8 +40,8 @@
           <div id="output"></div>
         </div>
         <!--need to add scroll down to this-->
-        <input id="message" type="text"  class="form-control" placeholder="כתב/י הודעה"/><!---message text-->
-        <button id="submit" class="btn btn-info">שלח/י הודעה</button>
+        <input id="message" type="text"  class="form-control" placeholder="write a message"/><!---message text-->
+        <button id="submit" class="btn btn-info">send a message</button>
       </div><hr><br><br>
 
       <script src="/socket.io/socket.io.js"></script> 
