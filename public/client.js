@@ -38,7 +38,8 @@ var conn;
 var peer_id;
 
 //create a peer connection with peer obj
-var peer = new Peer({key: 'lwjd5qra8257b9'});
+//var peer = new Peer({key: 'lwjd5qra8257b9'});
+var peer = new Peer({host:'peerjs-server.herokuapp.com', secure:true, port:443});
 
 //display the peer id on the DOM
 peer.on('open', function(id) {
