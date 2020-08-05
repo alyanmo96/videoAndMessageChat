@@ -29,7 +29,7 @@ getVideo({
         window.locastream = stream;
         recStream(stream,'lVideo')
     },error:function(err){
-        alert("אין אפשרות לגשת למצלמה, נא לאשר גישה");
+        alert("can't access camera");
         console.log(err);
     }
 })
@@ -53,7 +53,7 @@ peer.on('connection',function(connection){
 });
 
 peer.on('error',function(error){
-    alert('מספר זהוי פגישה שגוי, נא לעדכן');
+    alert('The customer define key is incorrect');
 })
 
 //onclick with the connection button---> expose information
